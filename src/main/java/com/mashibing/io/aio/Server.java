@@ -7,10 +7,12 @@ import java.nio.channels.AsynchronousServerSocketChannel;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
 
+// ≤‚ ‘“ªœ¬
 public class Server {
     public static void main(String[] args) throws Exception {
         final AsynchronousServerSocketChannel serverChannel = AsynchronousServerSocketChannel.open()
                 .bind(new InetSocketAddress(8888));
+	System.out.print("test");
 
         serverChannel.accept(null, new CompletionHandler<AsynchronousSocketChannel, Object>() {
             @Override
